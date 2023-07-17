@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\k8ApiDemo.props" />
+</Project>

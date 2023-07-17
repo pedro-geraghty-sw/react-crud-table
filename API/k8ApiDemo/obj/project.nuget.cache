@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ANB3+6FfHrjE3A0a6h6zA7Vyofgh9cE+2/Nzh/bHGPnhNiEoiPvCIIw4fI9ugYFoFCnJGSfwIbmMlJHo8tznyQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AlejandroRicheri\\source\\repos\\k8 Api Demo\\k8ApiDemo\\k8ApiDemo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AlejandroRicheri\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}
