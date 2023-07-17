@@ -13,9 +13,8 @@ import CRUDTable, {
 import "./index.css";
 import axios from "axios";
 
+const BASE_URL = process.env.REACT_APP_API_URL;
 
-
-const BASE_URL = "http://localhost/api/product";
 
 const DescriptionRenderer = ({ field }) => <textarea {...field} />;
 
