@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {useState} from 'react'
+import { useState } from 'react'
 import CRUDTable, {
   Fields,
   Field,
@@ -13,14 +13,16 @@ import CRUDTable, {
 import "./index.css";
 import axios from "axios";
 
-const BASE_URL = process.env.REACT_APP_API_URL;
-
+console.log(process.env);
+const TEST_EXAMPLE = process.env.REACT_APP_TEST_EXAMPLE;
+// const BASE_URL = process.env.REACT_APP_API_URL;
+const BASE_URL = "http://localhost/api/product";
 
 const DescriptionRenderer = ({ field }) => <textarea {...field} />;
 
 const Example = () => {
   const [apiUrl, setApiUrl] = useState(BASE_URL);
-  
+
   const HTTP_CLIENT = axios.create({
     headers: { 'Content-Type': 'application/json' },
     baseURL: apiUrl
@@ -114,14 +116,23 @@ const Example = () => {
   const styles = {
     container: { margin: "auto", width: "fit-content" }
   };
-
+  const handleClick= (event) => {
+    setApiUrl(event.target.value);
+  };
+  const handleChange = (event) => {
+    setMessage(event.target.value);
+  };
   return (
     <div style={styles.container}>
       <input
         type="text"
+        id="apiUrl"
+        name="apiUrl"
+        onChange={handleChange}
         value={apiUrl}
-        onChange={(e) => setApiUrl(e.target.value)}
       />
+      <button onClick={handleClick}>Update api url</button>
+      
 
       <CRUDTable
         caption="products"
